@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="project/style.css">
+    <script src="https://kit.fontawesome.com/4dc862254d.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    .areacontainer{
+        margin-top: 4%;
+        display: block;
+    }
+    .areacontainer-card{
+        height:auto;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: aliceblue;
+        padding: 10px;
+        border-radius: 10px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .areanotice{
+        text-align: center;
+        color: crimson;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    .mapimg{
+        width: 40%;
+        margin-top: 6%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+    }
+    @media (max-width:768px){
+        .areacontainer{
+        margin-top: 15%;
+    } 
+    .mapimg{
+        width: 50%;
+        margin-top: 25%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    }
+</style>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Foodie Navigator</label>
+        <ul>
+          <li><a class="active" href="login-user.php">Signin</a></li>
+        </ul>
+      </nav>
+
+      <img src="project/images/background/map.webp" class="mapimg">
+
+      <div class="areanotice">
+        "This trial period we're only provide two locations."
+      </div>
+
+      <div class="areacontainer">
+        <div class="areacontainer-card">
+            <h2>Colombo</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, perspiciatis numquam. Ipsum facere, mollitia aliquam consequatur officiis et optio illum suscipit aliquid laboriosam repudiandae architecto dolorum numquam omnis enim delectus.
+            </p>
+        </div>
+        <div class="areacontainer-card">
+            <h2>Kandy</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nisi totam tempore dignissimos illum aperiam repellat? Dolorem delectus ratione voluptatibus commodi maiores eveniet magnam. Atque at earum dicta. Tempore, accusantium.
+            </p>
+        </div>
+      </div>
+</body>
+<footer>
+    <br>
+    <a href="contents/about.html" style="color:aliceblue">About Us</a> <br> <a href="mailto:rajaratamalkoha@gmail.com" style="color:aliceblue">Contact Us</a> <br>
+    <a href="#"><i class="fa-brands fa-facebook" style="color:aliceblue"></i></a>  <a href="#"><i class="fa-brands fa-youtube" style="color:aliceblue"></i></a>
+    <h3>&copy; 2024 Foodie Navigator </h3>
+    <h3>All right reserved</h3>
+    <br>
+    </footer>
+</html>

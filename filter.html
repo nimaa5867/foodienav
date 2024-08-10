@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Project/style.css">
+    <script src="https://kit.fontawesome.com/4dc862254d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Foodie Navigator</label>
+        <ul>
+          <li><a class="active" href="login-user.php">Signin</a></li>
+        </ul>
+      </nav>
+
+    <div class="sidebody">
+        <div class="searchBar">
+            <input placeholder="Search..." id="searchBar" name="searchBar" type="text">
+            <i class="fa-solid fa-magnifying-glass glass" id="btn"></i>
+        </div>
+    </div>
+
+    <div class="root-body">
+        <div id="root"></div>
+    </div>
+
+<!--No more matching tag  -->
+<div id="box1"></div> 
+<script>
+const product = [
+    {
+        id: 0,
+        image: 'image/gg-1.jpg',
+        title: 'Ministry Of Crab',
+        price: '0-10',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 1,
+        image: 'image/hh-2.jpg',
+        title: 'Upali"s By Navaloka',
+        price: '10.00-20',
+        link : "https://google.com",
+    },
+    {
+        id: 2,
+        image: 'image/ee-3.jpg',
+        title: 'Kaema Sutra',
+        price: '20.00-30',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 3,
+        image: 'image/aa-1.jpg',
+        title: 'Nihonbashi',
+        price: '30.00-100',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 4,
+        image: 'image/bb-1.jpg',
+        title: 'The Gallery Cafe',
+        price: '20.00-30',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 5,
+        image: 'image/cc-1.jpg',
+        title: 'The Lagoon',
+        price: '0-10',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 6,
+        image: 'image/cc-1.jpg',
+        title: 'Park Street Mews',
+        price: '30.00-100',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 7,
+        image: 'image/cc-1.jpg',
+        title: 'Butter Botique',
+        price: '0-10',
+        link : "https://www.geeksforgeeks.org",
+    },
+    {
+        id: 8,
+        image: 'image/cc-1.jpg',
+        title: 'Chutneys',
+        price: '20.00-30',
+        link : "https://www.geeksforgeeks.org",
+    },
+];
+
+const categories = [...new Set(product.map((item) => { return item }))]
+
+document.getElementById('searchBar').addEventListener('keyup', (e) => {
+    const searchData = e.target.value.toLowerCase();
+    const filteredData = categories.filter((item) => {
+        return (
+            item.title.toLowerCase().includes(searchData)
+        )
+    })
+    displayItem(filteredData);
+
+    //Display no more matching
+    function displayMessage(message) {
+const outputElement = document.getElementById('box1');
+outputElement.textContent = message; // Update element content with message
+}
+
+    if (filteredData.length === 0) {
+// Display empty message (replace with your preferred method)
+     displayMessage("No more categories found.");
+    }else{
+        displayMessage();
+    }
+
+});
+
+
+const displayItem = (items) => {
+    document.getElementById('root').innerHTML = items.map((item) => {
+        var { image, title, price, link } = item;
+        return (
+            `<div class='box'>
+                <div class='bottom'>
+                    <p>${title}</p>
+                    <h2>$ ${price}.00</h2>
+                <button onclick="location.href='${link}';">Reserve</button>
+                </div>
+            </div>`
+        )
+    }).join('')
+};
+displayItem(categories);
+
+</script>
+</body>
+<footer>
+    <br>
+    <a href="contents/about.html" style="color:aliceblue">About Us</a> <br> <a href="mailto:rajaratamalkoha@gmail.com" style="color:aliceblue">Contact Us</a> <br>
+    <a href="#"><i class="fa-brands fa-facebook" style="color:aliceblue"></i></a>  <a href="#"><i class="fa-brands fa-youtube" style="color:aliceblue"></i></a>
+    <h3>&copy; 2024 Foodie Navigator </h3>
+    <h3>All right reserved</h3>
+    <br>
+    </footer>
+</html>

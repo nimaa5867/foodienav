@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap');
-html,body{
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap");
+html,
+body {
   /* background-image: url("images/back3.jpg"); */
-    /*background: #010138;*/
-    background-color: rgb(1, 0, 66);
-    font-family: 'Poppins', sans-serif;
-    /* background-image: url("images/background.jpg");
+  /*background: #010138;*/
+  background-color: #ddc99a;
+  height: 100%;
+  /*font-family: "Poppins", sans-serif;
+   background-image: url("images/background.jpg");
     background-position: center;
  
     background-size: cover;
@@ -13,22 +15,282 @@ html,body{
     background-repeat: no-repeat;
     background-attachment: fixed; */
 }
+/* CSS RESET STARTS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+/* CSS RESET ENDS */
 
-.login-text{
+/* HEADER STARTS */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  backdrop-filter: blur(3px);
+  color: white;
+}
+header .logo {
+  color: white;
+  line-height: 80px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-family: "Playwrite PL", cursive;
+  height: 50px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar ul {
+  display: flex;
+  margin-left: 20px;
+}
+header .nav ul li {
+  line-height: 80px;
+}
+header .navbar ul li a {
+  color: white;
+  margin: 10px 10px;
+  font-size: 17px;
+  padding: 7px 13px;
+  border: 1px solid#dac528e5;
+  border-radius: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease-in;
+}
+header .navbar ul li a:hover {
+  background: #b69852b2;
+  transition: 0.5s;
+}
+header .menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+.side-menu {
+  display: none;
+}
+/* HEADER ENDS */
+
+/* FOOTER STARTS */
+footer {
+  background-color: #b69852;
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 30vh;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+}
+.footer-section {
+  flex: 1 1;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 5px;
+}
+.footer-section ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.footer-section ul li a:hover,
+.social-icons a:hover {
+  opacity: 0.6;
+}
+.social-icons a {
+  color: aliceblue;
+  margin: 10px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #f8f8f8;
+  margin-top: 20px;
+}
+/* FOOTER ENDS */
+
+/*LANDING PAGE STARTS*/
+.landing-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(images/background/back4.jpg);
+}
+
+/* MAIN CONTENT OF THE PAGE STARTS */
+main {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1rem;
+}
+.index-textcard {
+  margin: 0 10%;
+  display: flex;
+  justify-content: left;
+  color: white;
+  text-shadow: 0px 0px 5px rgb(185, 161, 9);
+  align-items: center;
+  margin-top: 10%;
+}
+.typewriter h1 {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 6s steps(30, end), blink-caret 0.5s step-end infinite;
+  backdrop-filter: blur(2px);
+}
+
+/* THE TYPING EFFECT */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* THE TYPEWRITER CURSOR EFFECT */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.index-textcardinfo {
+  margin: 0 10%;
+  color: aliceblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  -webkit-text-stroke: 0.5px #1e1d17;
+}
+
+/* LINE UP EFFECT */
+.line {
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 16px;
+}
+.lineUp1,
+.lineUp2,
+.lineUp3 {
+  width: fit-content;
+  font-size: 20px;
+  margin-bottom: 10px;
+  animation: 3s anim-lineUp ease-out;
+  backdrop-filter: blur(2px);
+}
+.lineUp2,
+.lineUp3 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.lineUp2 {
+  animation-delay: 2s;
+}
+.lineUp3 {
+  animation-delay: 4s;
+}
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* MAIN CONTENT OF THE PAGE ENDS */
+/* LANDING PAGE ENDS */
+
+.login-text {
   padding: 5px;
   color: aliceblue;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: larger;
   font-weight: 900;
 }
-.marginbot{
+.marginbot {
   margin-bottom: 20px;
 }
-.alert{
+.alert {
   padding: 5px;
   color: red;
   background-color: rgb(255, 177, 177);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: medium;
   font-weight: 500;
   border-radius: 8px;
@@ -39,25 +301,25 @@ html,body{
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.container-forms{
+.container-forms {
   margin-left: auto;
   margin-right: auto;
   margin-top: 7%;
   /* align-items: center;
   justify-content: center; */
   background-color: #003258;
-  width:40%;
+  width: 40%;
   height: auto;
   text-align: center;
   padding: 10px;
   border-radius: 8px;
   transition: 0.8s;
 }
-.container-forms:hover{
+.container-forms:hover {
   box-shadow: 8px 8px black;
 }
 
-.text-space{
+.text-space {
   border-radius: 8px;
   height: 40%;
   width: 60%;
@@ -69,19 +331,20 @@ html,body{
   outline: none;
   border: none;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 800;
 }
-.text-space:hover{
+.text-space:hover {
   border-color: brown;
   box-shadow: 8px 8px 8px 8px black;
 }
 
-.alignleft{
+.alignleft {
   text-align: left;
   margin: 5%;
 }
-.output-space{
+.output-space {
   border-radius: 8px;
   height: 30%;
   width: 1000px;
@@ -93,32 +356,34 @@ html,body{
   outline: none;
   border: none;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 800;
   font-size: small;
   /* box-shadow: -16px -32px whitesmoke; */
 
   background: linear-gradient(145deg, #9a40a9, #b74cc9);
-  box-shadow:  20px 20px -60px #913ca0, 
-               -20px -20px -60px #c552d8;
-  outline:0 !important;
+  box-shadow: 20px 20px -60px #913ca0, -20px -20px -60px #c552d8;
+  outline: 0 !important;
   margin-left: auto;
   text-align: left;
-  }
+}
 /* .output-space:hover{
   box-shadow: 8px 8px  black;
   } */
-
 
 /* CSS */
 .login-btn {
   background-color: #c2fbd7;
   border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
   color: green;
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -132,191 +397,38 @@ html,body{
 }
 
 .login-btn:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
 
-.index-textcard{
-  padding-top: 20%;
-  margin-left: 10%;
-  display: flex;
-  justify-content: left;
-}
-.typewriter h1 {
-  color: #fff;
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight: 900;
-  font-size: 30px;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .10em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-}
-
-.index-cardinfo{
-  padding-top: 3%;
-  margin-left: 10%;
-  color: aliceblue;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-}
-
 /*for flex and margin*/
-.dis-flex{
+.dis-flex {
   display: flex;
 }
-.right-margin{
+.right-margin {
   margin-right: 30%;
 }
-
-/*nav bar*/
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    /* list-style: none;
-    box-sizing: border-box; */
-  }
-  /*body{
-    font-family: montserrat;
-  }*/
-  nav{
-    /* background: #bbc900; */
-    /* background-color: transparent; */
-    /* background-color: #0082e6; */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); 
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    z-index: 1000;
-    /* overflow: hidden; */
-    top: 0;
-  }
-  label.logo{
-    color: white;
-    font-size: 20px;
-    line-height: 80px;
-    /* padding: 0 100px; */
-    padding-left: 10px;
-    font-weight: bold;
-    font-family: "Playwrite PL", cursive;
-  }
-  nav ul{
-    float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  a.active,a:hover{
-    background: #c7ea00;
-    transition: .5s;
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  }
 
 /* @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .ios nav {
         -webkit-backdrop-filter: blur(60px); 
     }
 } */
-  @media (max-width: 952px){
-    label.logo{
-      font-family:"Playwrite PL", cursive;
-      font-size: 15px;
-      padding-left: 10px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: #003258;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-      z-index: 1000;
-    }
-    nav ul li{
-      display: block;
-      margin: 30px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #c7ea00;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-  }
-  section{
-    background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  }
-/*navbar end*/
-
-.kohatext{
+.kohatext {
   font-size: 20px;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   color: #dfd4ff;
   text-align: center;
-  margin-top:30px;
+  margin-top: 30px;
 }
-.hometext{
+.hometext {
   font-size: 15px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   color: #dfd4ff;
   margin-left: 10%;
@@ -329,27 +441,6 @@ html,body{
   padding: 10px;
   margin-bottom: 30px;
 }
-
-footer{
-  background-color: #0a58e9;
-  width: 100%;
-  height: auto;
-  color: rgb(255, 255, 255);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  /* margin-left: auto;
-  margin-right: auto; */
-  border-radius: 6px;
-  margin-top: 10px;
-  text-align: center;
-  opacity: 0.5;
-  outline-color: #d9ddf8;
-  outline-style: solid;
-  outline-width: 1px;
-  
-}
-
 /*Filter page*/
 .container {
   display: flex;
@@ -379,13 +470,13 @@ footer{
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  margin-top: 7%;
+  margin-top: 100px;
   z-index: 999;
   /* z-index: 1; */
   /* margin-left: auto;
   margin-right: auto; */
 }
-.sidebody{
+.sidebody {
   margin-left: 20%;
   margin-right: 20%;
   height: 50px;
@@ -426,12 +517,13 @@ input {
   font-weight: bold;
   color: white;
 }
-.root-body{
+.root-body {
   margin-top: 8%;
+  min-height: 80vh;
 }
 #root {
   width: 100%;
-  display:contents;
+  display: contents;
   /* grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px; */
 }
@@ -447,11 +539,11 @@ input {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   transition: 0.7s;
-  box-shadow: 0 10px 20px rgba(0,0,0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0);
   margin-left: 5%;
   margin-right: 5%;
 }
-.box:hover{
+.box:hover {
   box-shadow: 0 20px 40px rgba(255, 255, 255, 0.5);
 }
 /*no matching category*/
@@ -494,10 +586,6 @@ input {
   justify-content: space-between;
   height: 110px;
 }
-h2 {
-  font-size: 20px;
-  color: orangered;
-}
 button {
   width: 100%;
   position: relative;
@@ -515,6 +603,68 @@ button:hover {
 }
 /*Filter Page End*/
 
+/* FOOTER 
+footer {
+  background-color: #b69852;
+  color: aliceblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+}
+.footer-section {
+  flex: 1 1;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-section ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 5px;
+}
+.footer-section ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.footer-section ul li a:hover,
+.social-icons a:hover {
+  opacity: 0.5;
+}
+.social-icons a {
+  color: aliceblue;
+  margin: 10px;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #ffffff;
+  margin-top: 20px;
+}
+FOOTER ENDS*/
+
 /*All responsive parts*/
 /* For tablets and small desktops */
 @media (max-width: 1024px) {
@@ -522,8 +672,8 @@ button:hover {
     width: 60%;
     margin-top: 5%;
   }
-  .index-textcard{
-    padding-top: 20%;
+  .index-textcard {
+    padding-top: 40%;
     margin-left: 10%;
   }
   .typewriter h1 {
@@ -531,25 +681,104 @@ button:hover {
     font-weight: 900;
     font-size: 30px;
   }
-
 }
 
 /* For large smartphones */
 @media only screen and (max-width: 768px) {
-  .container-forms {
-    width: 80%;
-    margin-top: 10%;
+  /* HEADER STARTS */
+  header .menu-icon {
+    display: block;
+    position: relative;
+    z-index: 1;
   }
-  .index-textcard{
-    padding-top: 30%;
-    margin-left: 10%;
+  header .navbar ul li {
+    display: none;
+  }
+  .side-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    transition: all 0.5s ease-in;
+  }
+  .side-menu ul li {
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .side-menu ul li a {
+    color: white;
+    margin: 10px;
+    font-size: 17px;
+    padding: 7px 13px;
+    border: 1px solid#dac528e5;
+    border-radius: 8px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease-in;
+  }
+  .side-menu ul li a:hover {
+    background: #b69852b2;
+    transition: 0.5s;
+  }
+  .open {
+    left: 0;
+  }
+  /* HEADER ENDS */
+
+  /* FOOTER STARTS */
+  footer {
+    height: 40vh;
+    overflow: hidden;
+  }
+  .footer-container {
+    padding-top: 0px;
+  }
+  .footer-section {
+    margin-top: 5px;
+  }
+  .footer-section ul {
+    flex-direction: column;
+  }
+  /* FOOTER ENDS */
+
+  /*LANDING PAGE STARTS*/
+  /* MAIN CONTENT OF THE PAGE STARTS */
+  main {
+    height: 60vh;
+  }
+  .index-textcard {
+    justify-content: center;
+  }
+  .index-textcardinfo {
+    text-align: center;
   }
   .typewriter h1 {
     color: #fff;
     font-weight: 900;
     font-size: 25px;
   }
-  .indexsign-btn{
+  .lineUp1,
+  .lineUp2,
+  .lineUp3 {
+    font-size: 15px;
+    width: 100%;
+  }
+  /* MAIN CONTENT OF THE PAGE ENDS */
+  /*LANDING PAGE ENDS*/
+
+  .container-forms {
+    width: 80%;
+    margin-top: 10%;
+  }
+  .indexsign-btn {
     background-color: #c7ea00;
     font-size: 17px;
     padding: 7px 13px;
@@ -559,20 +788,88 @@ button:hover {
     width: 60px;
     margin-left: 10%;
     cursor: pointer;
-  } 
-    .show-mobile {
-      display: block;
-    }
+  }
+  .show-mobile {
+    display: block;
+  }
+  
+  section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+  }
+  /*navbar end*/
+  .searchBar {
+    margin-top: 100px;
+  }
 }
 
-/* For small smartphones */
+/*
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  
+}
+.logo {
+  color: white;
+  font-size: 20px;
+  line-height: 80px;
+  
+  padding-left: 10px;
+  font-weight: bold;
+  font-family: "Playwrite PL", cursive;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border: 5px #dac528e5;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a.active{
+  background: #dac528e5;
+  transition: 0.5s;
+}
+a:hover {
+  background: #dac528e5;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}*/
+
+/* For small smartphones 
 @media only screen and (max-width: 480px) {
   .container-forms {
     width: 90%;
     margin-top: 30%;
   }
-  .index-textcard{
-    padding-top: 80%;
+  .index-textcard {
+    padding-top: 40%;
     margin-left: 10%;
   }
   .typewriter h1 {
@@ -580,7 +877,10 @@ button:hover {
     font-weight: 900;
     font-size: 20px;
   }
-  .indexsign-btn{
+  .index-cardinfo{
+    text-align: center;
+  }
+  .indexsign-btn {
     background-color: #c7ea00;
     font-size: 17px;
     padding: 7px 13px;
@@ -590,8 +890,11 @@ button:hover {
     width: 60px;
     margin-left: 10%;
     cursor: pointer;
-  } 
-    .show-mobile {
-      display:block;
-    }
-}
+  }
+  .show-mobile {
+    display: block;
+  }
+  .lineUp1, .lineUp2, .lineUp3{
+    font-size: 18px;
+  }
+}*/

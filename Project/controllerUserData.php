@@ -16,9 +16,9 @@ function smtp_mailer($to, $subject, $msg, $mail) {
     $mail->Port = 587;
     $mail->IsHTML(true);
     $mail->CharSet = 'UTF-8';
-    $mail->Username = "temporaryforotp@gmail.com";
-    $mail->Password = "rnzgudcohirizcqi";
-    $mail->SetFrom ("temporaryforotp@gmail.com");
+    $mail->Username = "foodienavigator@gmail.com";
+    $mail->Password = "fhvyqytqqyxfcuif";
+    $mail->SetFrom ("foodienavigator@gmail.com");
     $mail->Subject = $subject;
     $mail->Body = $msg;
     $mail->AddAddress($to);
@@ -61,7 +61,7 @@ if (isset($_POST['signup'])) {
         if ($data_check) {
             $subject = "Email Verification Code";
             $message = "Dear $fname $lname, <br><br> Your verification code is $code.Your registration number is $regno.Thank you for join with us.";
-            $mail->SetFrom("temporaryforotp@gmail.com");
+            $mail->SetFrom("foodienavigator@gmail.com");
             if (smtp_mailer($email, $subject, $message, $mail)) {
                 $info = "We've sent a verification code to your email - $email";
                 $_SESSION['info'] = $info;
@@ -126,7 +126,7 @@ if(isset($_POST['check'])){
               //$lname = mysqli_real_escape_string($con, $_POST['l_name']);
               $subject = "Login Information";
               $message = "Dear user, <br><br> Someone using your $email's account to login to the site.If you,ignore this message.Thank you for join with us.";
-              $mail->SetFrom("temporaryforotp@gmail.com");
+              $mail->SetFrom("foodienavigator@gmail.com");
               if (smtp_mailer($email, $subject, $message, $mail)){
                   //$info = "We've sent a verification code to your email - $email";
                   //$_SESSION['info'] = $info;
@@ -162,7 +162,7 @@ if(isset($_POST['check-email'])){
         if($run_query){
             $subject = "Password Reset Code";
             $message = "Dear user ,<br><br> Your password reset code is $code";
-            $mail->SetFrom("temporaryforotp@gmail.com");
+            $mail->SetFrom("foodienavigator@gmail.com");
             if(smtp_mailer($email, $subject, $message, $mail)){
                 $info = "We've sent a passwrod reset otp to your email - $email";
                 $_SESSION['info'] = $info;

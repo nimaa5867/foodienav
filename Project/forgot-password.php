@@ -7,15 +7,18 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
     <title>Forgot Password</title>
     <link rel="icon" type="image/x-icon" href="images/titleimg.jpg">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
-<body>
+<body class="login-background">
 
 <div class="container-forms">
                 <form action="forgot-password.php" method="POST" autocomplete="">
-                    <h2 class="login-text">Forgot Password</h2>
-                    <img src="images/forgot.jpg" alt="Error" style="width:40%; height:auto; border-radius:8px">
+                    <h2 class="login-text">FORGOT PASSWORD</h2>
+                    <img src="images/forgot.jpg" alt="Error">
                     <p class="login-text">Enter your email address</p>
                     <?php
                         if(count($errors) > 0){
@@ -31,14 +34,21 @@
                         }
                     ?>
 
-                        <input class="text-space" type="email" name="email" placeholder="Enter email address" required value="<?php echo $email ?>">
+                        <input class="text-space" type="email" name="email" placeholder="Email address" required value="<?php echo $email ?>">
 
-                    <div class="link login-link text-center">Go back <a href="index1.php">Click here</a></div>
                     <div class="form-group">
-                        <button class="login-btn" type="submit" name="check-email" value="Continue">Forgot Password</button>
+                        <button class="login-button" type="submit" name="check-email" value="Continue">
+                            CONTINUE
+                        </button>
+                    </div>
+                    <div class="form-text">
+                        <a href="index1.php">GO BACK</a>
                     </div>
                 </form>
 
 </div>
+<?php 
+    include("footer.php")
+    ?>
 </body>
 </html>

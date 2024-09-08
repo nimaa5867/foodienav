@@ -5,7 +5,7 @@ body {
   /* background-image: url("images/back3.jpg"); */
   /*background: #010138;*/
   background-color: #ddc99a;
-  height: 100%;
+  min-height: 100vh;
   /*font-family: "Poppins", sans-serif;
    background-image: url("images/background.jpg");
     background-position: center;
@@ -32,7 +32,9 @@ li {
   list-style: none;
 }
 /* CSS RESET ENDS */
-
+.active {
+  background: #e1ab2e;
+}
 /* HEADER STARTS */
 header {
   position: fixed;
@@ -50,7 +52,6 @@ header .navbar {
 }
 header .logo {
   color: white;
-  line-height: 80px;
   padding-left: 10px;
   font-weight: bold;
   font-family: "Playwrite PL", cursive;
@@ -58,6 +59,7 @@ header .logo {
   width: 100px;
   justify-content: center;
   align-items: center;
+  object-fit: contain;
 }
 header .navbar ul {
   display: flex;
@@ -157,7 +159,7 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url(images/background/back4.jpg);
@@ -179,7 +181,7 @@ main {
   color: white;
   text-shadow: 0px 0px 5px rgb(185, 161, 9);
   align-items: center;
-  margin-top: 10%;
+  margin-top: 20%;
 }
 .typewriter h1 {
   color: #fff;
@@ -275,71 +277,184 @@ main {
 /* MAIN CONTENT OF THE PAGE ENDS */
 /* LANDING PAGE ENDS */
 
-.login-text {
-  padding: 5px;
-  color: aliceblue;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: larger;
-  font-weight: 900;
-}
-.marginbot {
-  margin-bottom: 20px;
-}
-.alert {
-  padding: 5px;
-  color: red;
-  background-color: rgb(255, 177, 177);
-  font-family: "Courier New", Courier, monospace;
-  font-size: medium;
-  font-weight: 500;
-  border-radius: 8px;
-  width: 60%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+/* lOGIN PAGE STARTS */
+.login-background {
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/background/formback.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container-forms {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7%;
-  /* align-items: center;
-  justify-content: center; */
-  background-color: #003258;
-  width: 40%;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: solid 2px rgba(0, 0, 0, 0.679);
+  border-radius: 20px;
+  width: 50vw;
+  min-height: fit-content;
   text-align: center;
   padding: 10px;
-  border-radius: 8px;
-  transition: 0.8s;
+  transition: 0.5s;
+  box-shadow: 5px 5px 15px 5px black;
 }
 .container-forms:hover {
-  box-shadow: 8px 8px black;
+  box-shadow: 5px 5px 10px 3px black;
 }
-
-.text-space {
+.container-forms img {
   border-radius: 8px;
-  height: 40%;
+  width: 40%;
+  height: auto;
+}
+.login-button {
+  background-color: #eea702b2;
+  color: white;
+  border-radius: 80px;
+  width: fit-content;
+  padding: 7px 20px;
+  text-align: center;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-align: center;
+  transition: 0.5s;
+  border: 1px solid#dac528e5;
+}
+.login-button:hover {
+  background-color: #eea702e1;
+  box-shadow: 5px 5px 15px 1px black;
+}
+.form-text {
+  margin: 5% 0;
+  color: white;
+}
+.form-text a {
+  font-weight: 600;
+}
+.form-text a:hover {
+  opacity: 0.7;
+}
+.login-text {
+  padding: 20px;
+  color: aliceblue;
+  font-size: larger;
+  font-weight: 700;
+}
+.text-space {
+  border: 1px solid#dac528e5;
+  border-radius: 18px;
   width: 60%;
   color: rgb(0, 0, 0);
   padding: 10px;
   transition: 0.5s;
   margin-bottom: 2%;
-  background-color: aliceblue;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #eea702b2;
   font-weight: 800;
+  transition: 0.5s;
 }
-.text-space:hover {
-  border-color: brown;
-  box-shadow: 8px 8px 8px 8px black;
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+.text-space:hover {
+  box-shadow: 5px 5px 15px 5px black;
+}
+/* LOGIN PAGE ENDS */
+
+/* SIGN IN PAGE STARTS */
+.signin-background {
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/background/formback.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* SIGN IN PAGE ENDS */
+
+/* HOME PAGE STARTS */
+.home-background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: changeBackground 20s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("images/background/back1.jpg");
+  }
+  30% {
+    background-image: url("images/background/back2.jpg");
+  }
+  60% {
+    background-image: url("images/background/back3.jpg");
+  }
+  90% {
+    background-image: url("images/background/back4.jpg");
+  }
+  100% {
+    background-image: url("images/background/back3.jpg");
+  }
+}
+.h4 {
+  margin: 0 10%;
+  color: aliceblue;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  align-items: center;
+  -webkit-text-stroke: 0.5px #1e1d17;
+  margin-left: 40%;
+  margin-right: auto;
+  /* text-align: center;
+  /* margin-top:15%; 
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: lightblue; */
+  top: 40%;
+  position: absolute;
+}
+/* HOME PAGE ENDS*/
+
+/* .marginbot {
+  margin-bottom: 20px;
+} */
+
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  background-color: rgba(255, 177, 177, 0.732);
+  font-weight: 500;
+  border: 1px solid red;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+}
+.alert-success {
+  color: rgba(8, 123, 27, 0.726);
+  background-color: rgba(183, 255, 177, 0.608);
+  border: 1px solid green;
+}
 .alignleft {
   text-align: left;
   margin: 5%;
@@ -372,45 +487,7 @@ main {
   box-shadow: 8px 8px  black;
   } */
 
-/* CSS */
-.login-btn {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
-    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
-    rgba(44, 187, 99, 0.15) 0 16px 32px;
-  color: green;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-  padding: 7px 20px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin: 5px;
-}
-
-.login-btn:hover {
-  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
-    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
-    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
-    rgba(44, 187, 99, 0.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
-}
-
 /*for flex and margin*/
-.dis-flex {
-  display: flex;
-}
-.right-margin {
-  margin-right: 30%;
-}
 
 /* @media only screen and (-webkit-min-device-pixel-ratio: 3) {
     .ios nav {
@@ -471,10 +548,10 @@ main {
   justify-content: space-between;
   position: fixed;
   margin-top: 100px;
-  z-index: 999;
-  /* z-index: 1; */
-  /* margin-left: auto;
-  margin-right: auto; */
+  z-ind
+  input {
+    width: 100%;
+  }
 }
 .sidebody {
   margin-left: 20%;
@@ -523,9 +600,10 @@ input {
 }
 #root {
   width: 100%;
-  display: contents;
-  /* grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+  justify-content: center;
+  gap: 3rem;
 }
 .box {
   margin-bottom: 10px;
@@ -542,6 +620,11 @@ input {
   box-shadow: 0 10px 20px rgba(0, 0, 0);
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.box-image img{
+  height: 300px;
+  width: 100%;
 }
 .box:hover {
   box-shadow: 0 20px 40px rgba(255, 255, 255, 0.5);
@@ -586,7 +669,7 @@ input {
   justify-content: space-between;
   height: 110px;
 }
-button {
+.button {
   width: 100%;
   position: relative;
   border: none;
@@ -598,7 +681,7 @@ button {
   /* z-index: 0; */
   transition: 0.5s;
 }
-button:hover {
+.button:hover {
   background-color: orangered;
 }
 /*Filter Page End*/
@@ -666,7 +749,7 @@ footer {
 FOOTER ENDS*/
 
 /*All responsive parts*/
-/* For tablets and small desktops */
+/* For tablets and small desktops 
 @media (max-width: 1024px) {
   .container-forms {
     width: 60%;
@@ -681,7 +764,10 @@ FOOTER ENDS*/
     font-weight: 900;
     font-size: 30px;
   }
-}
+  .h4 {
+    margin-left:40%;
+  }
+}*/
 
 /* For large smartphones */
 @media only screen and (max-width: 768px) {
@@ -756,6 +842,7 @@ FOOTER ENDS*/
   }
   .index-textcard {
     justify-content: center;
+    margin-top: 40%;
   }
   .index-textcardinfo {
     text-align: center;
@@ -774,10 +861,18 @@ FOOTER ENDS*/
   /* MAIN CONTENT OF THE PAGE ENDS */
   /*LANDING PAGE ENDS*/
 
+  /* LOG IN PAGE STARTS */
   .container-forms {
+    font-size: 10px;
+  }
+  /* LOG IN PAGE ENDS */
+  .h4 {
+    margin-left: 30%;
+  }
+  /* .container-forms {
     width: 80%;
     margin-top: 10%;
-  }
+  } */
   .indexsign-btn {
     background-color: #c7ea00;
     font-size: 17px;
@@ -792,7 +887,7 @@ FOOTER ENDS*/
   .show-mobile {
     display: block;
   }
-  
+
   section {
     background: url(bg1.jpg) no-repeat;
     background-size: cover;
@@ -801,6 +896,17 @@ FOOTER ENDS*/
   /*navbar end*/
   .searchBar {
     margin-top: 100px;
+  }
+  .container-forms {
+    margin-top: 15%;
+    width: 65vw;
+    min-height: fit-content;
+  }
+}
+
+.logo {
+  img {
+    height: 50px;
   }
 }
 
@@ -896,5 +1002,8 @@ a:hover {
   }
   .lineUp1, .lineUp2, .lineUp3{
     font-size: 18px;
+  }
+     .h4 {
+    margin-left:20%;
   }
 }*/

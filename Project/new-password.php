@@ -10,19 +10,22 @@ if($email == false){
 <head>
     <meta charset="UTF-8">
     <title>Create a New Password</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
-<body>
+<body class="login-background">
 
 <div class="container-forms">
                 <form action="new-password.php" method="POST" autocomplete="off">
-                    <h2 class="login-text">New Password</h2>
-                    <img src="images/newpass.jpg" alt="Error" style="width:40%; height:auto; border-radius:8px">
+                    <h2 class="login-text">NEW PASSWORD</h2>
+                    <img src="images/newpass.jpg" alt="Error">
                     <?php 
                     if(isset($_SESSION['info'])){
                         ?>
-                        <div class="alert alert-success text-center">
+                        <div class="alert-success alert ">
                             <?php echo $_SESSION['info']; ?>
                         </div>
                         <?php
@@ -31,7 +34,7 @@ if($email == false){
                     <?php
                     if(count($errors) > 0){
                         ?>
-                        <div class="alert alert-danger text-center">
+                        <div class="alert">
                             <?php
                             foreach($errors as $showerror){
                                 echo $showerror;
@@ -46,10 +49,12 @@ if($email == false){
 
                         <input class="text-space" type="password" name="cpassword" placeholder="Confirm your password" required> <br>
 
-                        <button class="login-btn" type="submit" name="change-password" value="Change">Change</button>
+                        <button class="login-button" type="submit" name="change-password" value="Change">CHANGE</button>
                 </form>
 
     </div>
-    
+    <?php 
+    include("footer.php")
+    ?>
 </body>
 </html>

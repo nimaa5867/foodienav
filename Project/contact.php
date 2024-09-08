@@ -30,20 +30,24 @@ if($email != false && $password != false){
     <title>Document</title>
 </head>
 <body>
-<nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">Foodie Navigator</label>
-      <ul>
-        <li><a class="#" href="index1.php">Home</a></li>
-        <li><a class="#" href="#">Areas</a></li>
-        <li><a class ="#" a href="user-profile.php">Profile</a></li>
-        <li><a class="active" href="contact.php">Contact</a></li>
-      </ul>
-    </nav>
-
+<header>
+      <nav class="navbar">  
+          <img src="images/Logo.png" alt="Brand Logo" class="logo"/>
+          <ul>
+            <li><a class="#" href="../area.php">AREAS</a></li>
+            <li><a class ="#" a href="user-profile.php">PROFILE</a></li>
+            <li><a class="active" href="/Project/index1.php">HOME</a></li>
+          </ul>
+         <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
+      </nav>
+      <nav class="side-menu" id="side-menu">
+        <ul>
+          <li><a class="active" href="#">HOME</a></li>
+          <li><a href="../area.html">AREAS</a></li>
+          <li><a href="user-profile.php">PROFILE</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="container-forms">
     <form action="https://api.web3forms.com/submit" method="POST">
         <h2>Get in Touch.</h2>

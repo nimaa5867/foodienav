@@ -64,14 +64,7 @@ if($email != false && $password != false){
 
 
 </body>   
-
-<footer>
-<br>
-<a href="contents/about.html" style="color:aliceblue">About Us</a> <br> <a href="mailto:rajaratamalkoha@gmail.com" style="color:aliceblue">Contact Us</a> <br>
-<a href="#"><i class="fa-brands fa-facebook" style="color:aliceblue"></i></a>  <a href="#"><i class="fa-brands fa-youtube" style="color:aliceblue"></i></a>
-<h3>&copy; 2024 Foodie Navigator </h3>
-<h3>All right reserved</h3>
-<br>
-</footer>
-
+<?php 
+    include("footer.php")
+    ?>
 </html>

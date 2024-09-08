@@ -1,2 +1,2 @@
 ﻿# Foodie Navigator
-# 1st year project
+1st year project

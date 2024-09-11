@@ -36,7 +36,7 @@
   <div class="container-forms">
     <form action="signup-user.php" method="POST" autocomplete="">
       <h2 class="login-text">SIGN UP</h2>
-      <img src="images/signup.jpg" alt="Error">
+      <img src="images/signup.webp" alt="Error">
       <p class="login-text">It's quick and easy.</p>
       <?php
       if (count($errors) == 1) {

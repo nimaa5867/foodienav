@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
     <title>Login Form</title>
-    <link rel="icon" type="image/x-icon" href="images/titleimg.jpg">
+    <link rel="icon" type="image/x-icon" href="images/Logo.webp">
     <link rel="stylesheet" href="style.css">
     <link
       rel="stylesheet"
@@ -37,7 +37,7 @@
         <div class="login-text">LOGIN</div>
 
         <img
-          src="images/login.jpg"
+          src="images/login.webp"
           alt="Error"
         />
 

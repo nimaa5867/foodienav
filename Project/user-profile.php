@@ -33,38 +33,50 @@ if($email != false && $password != false){
 </head>
 <body>
 
-<nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-    <i class="fas fa-bars"></i>
-    </label>
-    <label class="logo">Foodie Navigator</label>
-    <ul>
-    <li><a class="#" href="index1">Home</a></li>
-    <li><a class ="active" a href="user-profile.php">Profile</a></li>
-    </ul>
-</nav>
+<header>
+      <nav class="navbar">  
+          <img src="images/Logo.png" alt="Brand Logo" class="logo"/>
+          <ul>
+            <li><a href="area.php">AREAS</a></li>
+            <li><a class="active" href="user-profile.php">PROFILE</a></li>
+            <li><a href="index1.php">HOME</a></li>
+          </ul>
+         <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
+      </nav>
+      <nav class="side-menu" id="side-menu">
+        <ul>
+          <li><a href="index1.php">HOME</a></li>
+          <li><a href="area.php">AREAS</a></li>
+          <li><a class="active" href="user-profile.php">PROFILE</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<div class="marginbot"></div>
     <div class="container-forms">
-        <h2 class="login-text">Profile</h2>
+        <h2 class="login-text">PROFILE</h2>
         <div class="marginbot"></div>
         <div class="alignleft">
         <output class="output-space"> F Name - <?php echo $fetch_info['fname'] ?></output> <div class="marginbot"></div>
         <output class="output-space"> L Name - <?php echo $fetch_info['lname'] ?></output> <div class="marginbot"></div>
-        <output class="output-space"> Reg NO: - <?php echo $fetch_info['regno'] ?></output> <div class="marginbot"></div>
         <output class="output-space"> Email - <?php echo $fetch_info['email'] ?></output> <div class="marginbot"></div>
         <output class="output-space"> Status - <?php echo $fetch_info['status'] ?></output> <div class="marginbot"></div>
-        <div class="marginbot"></div>
-        
-        
+        <div class="marginbot"></div>   
     </div>
-        <button onclick="location.href = 'logout-user.php';" class="login-btn" type="logout" name="logout" value="Signup">Logout</button>
-    </div>
+        <button onclick="location.href = 'logout-user.php';" class="login-button" type="logout" name="logout" value="Signup">Log out</button>
+</div>
 
-
-</body>   
-<?php 
+    <?php 
     include("footer.php")
     ?>
+
+<script>
+      // JAVASCRIPT FOR MENU TOGGLE
+      const menuIcon = document.getElementById("menu-icon");
+      const sideMenu = document.getElementById("side-menu");
+
+      menuIcon.addEventListener("click", function () {
+        sideMenu.classList.toggle("open");
+      });
+</script>
+</body>   
 </html>

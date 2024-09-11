@@ -31,7 +31,7 @@ if($_SESSION['info'] == false){
             }
             ?>
 
-            <img src="images/changed.jpg" alt="Error" style="width:40%; height:auto; border-radius:8px"> <br>
+            <img src="images/changed.webp" alt="Error" style="width:40%; height:auto; border-radius:8px"> <br>
                 <form action="login-user.php" method="POST">
             
                         <button class="login-button" type="submit" name="login-now" value="Login Now">LOGIN NOW</button>

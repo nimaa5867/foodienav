@@ -32,9 +32,11 @@ li {
   list-style: none;
 }
 /* CSS RESET ENDS */
-.active {
+
+/* .active {
   background: #e1ab2e;
-}
+} */
+
 /* HEADER STARTS */
 header {
   position: fixed;
@@ -54,7 +56,6 @@ header .logo {
   color: white;
   padding-left: 10px;
   font-weight: bold;
-  font-family: "Playwrite PL", cursive;
   height: 50px;
   width: 100px;
   justify-content: center;
@@ -70,17 +71,39 @@ header .nav ul li {
 }
 header .navbar ul li a {
   color: white;
-  margin: 10px 10px;
+  margin: 10px;
   font-size: 17px;
   padding: 7px 13px;
-  border: 1px solid#dac528e5;
-  border-radius: 8px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* border: 1px solid#dac528e5; 
+  border-radius: 8px; 
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-weight: 900;
+  position: relative;
   transition: background 0.3s ease-in;
 }
 header .navbar ul li a:hover {
-  background: #b69852b2;
+  /* background: #b69852b2; */
   transition: 0.5s;
+}
+header .navbar ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e1ab2e;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+header .navbar ul li a:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+header .navbar ul li a.active:before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 header .menu-icon {
   display: none;
@@ -162,7 +185,7 @@ footer {
   min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(images/background/back4.jpg);
+  background-image: url("images/background/back4.webp");
 }
 
 /* MAIN CONTENT OF THE PAGE STARTS */
@@ -281,7 +304,7 @@ main {
 .login-background {
   display: flex;
   flex-direction: column;
-  background-image: url("images/background/formback.jpg");
+  background-image: url("images/background/formback.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -375,7 +398,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .signin-background {
   display: flex;
   flex-direction: column;
-  background-image: url("images/background/formback.jpg");
+  background-image: url("images/background/formback.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -398,19 +421,19 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @keyframes changeBackground {
   0% {
-    background-image: url("images/background/back1.jpg");
+    background-image: url("images/background/back1.webp");
   }
   30% {
-    background-image: url("images/background/back2.jpg");
+    background-image: url("images/background/back2.webp");
   }
   60% {
-    background-image: url("images/background/back3.jpg");
+    background-image: url("images/background/back3.webp");
   }
   90% {
-    background-image: url("images/background/back4.jpg");
+    background-image: url("images/background/back4.webp");
   }
   100% {
-    background-image: url("images/background/back3.jpg");
+    background-image: url("images/background/back3.webp");
   }
 }
 .h4 {
@@ -424,19 +447,55 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-text-stroke: 0.5px #1e1d17;
   margin-left: 40%;
   margin-right: auto;
-  /* text-align: center;
-  /* margin-top:15%; 
-  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: lightblue; */
   top: 40%;
   position: absolute;
 }
 /* HOME PAGE ENDS*/
 
-/* .marginbot {
+/*AREA PAGE STARTS*/
+.areacontainer {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+}
+.areacontainer-card h2 {
+  font-size: 20px;
+  color: orangered;
+}
+.areacontainer-card {
+  height: auto;
+  width: auto;
+  margin: 0 5%;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
   margin-bottom: 20px;
-} */
+  transition: all 0.3s;
+}
+.areacontainer-card:hover {
+  padding: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0);
+  /*box-shadow: 0 20px 40px rgba(255, 255, 255, 0.5);*/
+}
+.areanotice {
+  text-align: center;
+  color: crimson;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.mapimg {
+  width: 40%;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/*AREA PAGE ENDS*/
+
+.marginbot {
+  margin-bottom: 20px;
+}
 
 .alert {
   display: flex;
@@ -548,8 +607,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: space-between;
   position: fixed;
   margin-top: 100px;
-  z-ind
-  input {
+  z-ind input {
     width: 100%;
   }
 }
@@ -606,25 +664,22 @@ input {
   gap: 3rem;
 }
 .box {
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  /* border: 1px solid #333; */
-  border-radius: 5px;
   padding: 15px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   transition: 0.7s;
   box-shadow: 0 10px 20px rgba(0, 0, 0);
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 5%; 
 }
 
-.box-image img{
+.box-image img {
   height: 300px;
   width: 100%;
+  border-radius: 10px;
 }
 .box:hover {
   box-shadow: 0 20px 40px rgba(255, 255, 255, 0.5);
@@ -866,6 +921,21 @@ FOOTER ENDS*/
     font-size: 10px;
   }
   /* LOG IN PAGE ENDS */
+
+  /*AREA PAGE STARTS*/
+  @media (max-width: 768px) {
+    .areacontainer {
+      margin-top: 15%;
+    }
+    .mapimg {
+      width: 50%;
+      margin-top: 25%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+  /*AREA PAGE ENDS*/
   .h4 {
     margin-left: 30%;
   }

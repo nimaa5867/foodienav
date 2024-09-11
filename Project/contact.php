@@ -28,21 +28,25 @@ if($email != false && $password != false){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 </head>
-<body>
+<body class="login-background">
 <header>
       <nav class="navbar">  
           <img src="images/Logo.png" alt="Brand Logo" class="logo"/>
           <ul>
-            <li><a class="#" href="../area.php">AREAS</a></li>
-            <li><a class ="#" a href="user-profile.php">PROFILE</a></li>
-            <li><a class="active" href="/Project/index1.php">HOME</a></li>
+            <li><a href="../area.php">AREAS</a></li>
+            <li><a href="user-profile.php">PROFILE</a></li>
+            <li><a href="/Project/index1.php">HOME</a></li>
           </ul>
          <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
       </nav>
       <nav class="side-menu" id="side-menu">
         <ul>
-          <li><a class="active" href="#">HOME</a></li>
+          <li><a href="#">HOME</a></li>
           <li><a href="../area.html">AREAS</a></li>
           <li><a href="user-profile.php">PROFILE</a></li>
         </ul>
@@ -56,9 +60,21 @@ if($email != false && $password != false){
         <input type="text" name="name" placeholder="Your Name" class="text-space" value="<?php echo $fetch_info['fname'] ?> <?php echo $fetch_info['lname'] ?>" readonly>
         <input type="email" name="email" placeholder="Your Email" class="text-space" value="<?php echo $fetch_info['email'] ?>" readonly>
         <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" class="text-space" required></textarea>
-        <button type="submit" class="">Send</button>
+        <br>
+        <button type="submit" class="login-button">Send</button>
     </form>
     </div>
+    <?php 
+    include("footer.php")
+    ?>
+    <script>
+      // JAVASCRIPT FOR MENU TOGGLE
+      const menuIcon = document.getElementById("menu-icon");
+      const sideMenu = document.getElementById("side-menu");
 
+      menuIcon.addEventListener("click", function () {
+        sideMenu.classList.toggle("open");
+      });
+    </script>
 </body>
 </html>

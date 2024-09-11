@@ -21,7 +21,7 @@ if($email == false){
 <div class="container-forms">
                 <form action="new-password.php" method="POST" autocomplete="off">
                     <h2 class="login-text">NEW PASSWORD</h2>
-                    <img src="images/newpass.jpg" alt="Error">
+                    <img src="images/newpass.webp" alt="Error">
                     <?php 
                     if(isset($_SESSION['info'])){
                         ?>

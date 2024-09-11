@@ -42,16 +42,16 @@ if($email != false && $password != false){
       <nav class="navbar">  
           <img src="images/Logo.png" alt="Brand Logo" class="logo"/>
           <ul>
-            <li><a href="../area.php">AREAS</a></li>
+            <li><a href="area.php">AREAS</a></li>
             <li><a href="user-profile.php">PROFILE</a></li>
-            <li><a class="active" href="../Project/index1.php">HOME</a></li>
+            <li><a class="active" href="index1.php">HOME</a></li>
           </ul>
          <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
       </nav>
       <nav class="side-menu" id="side-menu">
         <ul>
-          <li><a class="active" href="#">HOME</a></li>
-          <li><a href="../area.php">AREAS</a></li>
+          <li><a class="active" href="index1.php">HOME</a></li>
+          <li><a href="area.php">AREAS</a></li>
           <li><a href="user-profile.php">PROFILE</a></li>
         </ul>
       </nav>

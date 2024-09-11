@@ -18,7 +18,7 @@
 <div class="container-forms">
                 <form action="forgot-password.php" method="POST" autocomplete="">
                     <h2 class="login-text">FORGOT PASSWORD</h2>
-                    <img src="images/forgot.jpg" alt="Error">
+                    <img src="images/forgot.webp" alt="Error">
                     <p class="login-text">Enter your email address</p>
                     <?php
                         if(count($errors) > 0){

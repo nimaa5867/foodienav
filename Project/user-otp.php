@@ -19,7 +19,7 @@ if($email == false){
 <div class="container-forms">
                 <form action="user-otp.php" method="POST" autocomplete="off">
                     <h2 class="login-text">CODE VERIFICATION</h2>
-                    <img src="images/otp.jpg" alt="Error">
+                    <img src="images/otp.webp" alt="Error">
                     <?php 
                     if(isset($_SESSION['info'])){
                         ?>

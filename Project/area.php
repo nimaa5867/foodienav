@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Areas</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
@@ -23,9 +24,9 @@
       </nav>
       <nav class="side-menu" id="side-menu">
         <ul>
-          <li><a href="#">HOME</a></li>
+          <li><a href="index1.php">HOME</a></li>
           <li><a class="active" href="#">AREAS</a></li>
-          <li><a href="/Project/user-profile.php">PROFILE</a></li>
+          <li><a href="user-profile.php">PROFILE</a></li>
         </ul>
       </nav>
     </header>
@@ -43,10 +44,7 @@
         <div class="areacontainer-card">
           <h2>Colombo</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, perspiciatis numquam. Ipsum facere, mollitia aliquam
-            consequatur officiis et optio illum suscipit aliquid laboriosam
-            repudiandae architecto dolorum numquam omnis enim delectus.
+            Experience a culinary journey like no other at our premier restaurant in the heart of Colombo, where flavor meets elegance.
           </p>
         </div>
       </a>
@@ -54,26 +52,23 @@
         <div class="areacontainer-card">
           <h2>Kandy</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nisi
-            totam tempore dignissimos illum aperiam repellat? Dolorem delectus
-            ratione voluptatibus commodi maiores eveniet magnam. Atque at earum
-            dicta. Tempore, accusantium.
+            Indulge in authentic and diverse cuisines at our cozy restaurant in Kandy, surrounded by the city's rich cultural charm.
           </p>
         </div>
       </a>
-      <div class="areacontainer-card" style="cursor: not-allowed">
+      <div class="disabled-areacontainer-card">
         <h2>Galle</h2>
         <p>Coming Soon!!!</p>
       </div>
-      <div class="areacontainer-card" style="cursor: not-allowed">
+      <div class="disabled-areacontainer-card">
         <h2>Kurunegala</h2>
         <p>Coming Soon!!!</p>
       </div>
-      <div class="areacontainer-card" style="cursor: not-allowed">
+      <div class="disabled-areacontainer-card">
         <h2>Anuradhapura</h2>
         <p>Coming Soon!!!</p>
       </div>
-      <div class="areacontainer-card" style="cursor: not-allowed">
+      <div class="disabled-areacontainer-card">
         <h2>Matara</h2>
         <p>Coming Soon!!!</p>
       </div>

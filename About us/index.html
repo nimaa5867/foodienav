@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,target-densitydpi=device-dpi, user-scalable=no" />
+    <title>About us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --about-sec:#1d1d23;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 65%;
+    scroll-behavior: smooth;
+}
+
+.about{
+    padding: 1rem 7%;
+    background: var(--about-sec);
+}
+
+.main-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-content{
+    flex: 1 1 45rem;
+}
+
+.about-inner-content{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-content .about-inner-content img{
+    position: relative;
+    width: 450px;
+    height: 600px;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.about-content .about-text-content{
+z-index: 222;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(20px);
+padding: 50px;
+max-width: 900px;
+border: 1px solid rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+transform: translate(-80px, 50px);
+}
+
+.about-text-content{
+    padding: 0 4rem;
+}
+
+.about-text-content h1{
+    color: #e58f00;
+    font-size: 40px;
+}
+
+.about-text-content p{
+    color: white;
+    font-size: 1.4rem;
+}
+</style>
+<body>
+
+
+        <div id="about" class="about">
+             <div class="main-about">
+                <div class="about-content">
+                    <div class="about-inner-content">
+                        <img src="image/Aboutus 6.jpeg"> 
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-inner-content">
+                        <div class="about-text-content">
+                            <h1>About Us</h1>
+                            <p>Welcome to <b>Foodie Navigator</b>, your ultimate restaurant discovery platform. Our mission is to simplify the way people find dining spots by offering a seamless, user-friendly experience. Currently, we cover <b>Colombo</b> and <b>Kandy</b>, 
+                                two bustling cities with a rich variety of culinary experiences. Whether you're searching for a cozy café or a fine dining experience, Foodie Navigator is here to guide you.</p>
+                                <br>
+                              <p> Our platform is designed to help users explore dining options with ease, offering real-time information, reviews, and personalized recommendations. 
+                                With an intuitive interface and a growing list of restaurants, we aim to make your food journey delightful.</p>
+                                <br>
+                               <p> We are also excited to announce that we are expanding! <b>Galle, Matara, Kurunegala,</b> and <b>Anuradhapura</b>
+                                 will soon be added to our platform, bringing even more delicious choices to your fingertips.
+                                 Stay tuned as we continue to grow, and thank you for choosing Foodie Navigator to enhance your dining adventures.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        <script>
+
+            //Common reveal options to create reveal animations
+            ScrollReveal({
+                reset: true,
+                distance: '60px', 
+                duration: 2500,
+                delay: 400
+            });
+
+            //target elements, and spcify options to create reveal animations
+            ScrollReveal().reveal('.about, .about-inner-content', { delay: 600, origin: 'bottom'  });
+            ScrollReveal().reveal('.about-text-content', { delay: 700, origin: 'right'  });
+        </script>
+</body>
+</html>

@@ -1,230 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/4dc862254d.js" crossorigin="anonymous"></script>
-    <style>
-html {
-  box-sizing: border-box;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Team</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <p class="team-text">OUR TEAM</p>
+    <hr class="team-hr" />
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-.margintop{
-        margin-top: 7%;
-    }
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-  .margintop{
-        margin-top: 24%;
-  }
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  color: aliceblue;
-  background-color: darkgrey;
-  padding: 10px;
-  border-radius: 8px;
-  transition: 0.8s;
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  background-color: honeydew;
-  color: black;
-}
-
-.container {
-  padding: 0 16px;
-  display: block;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both; 
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-.team-img{
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-.team-icons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    font-size: 20px;
-}
-    </style>
-    </head>
-    <body>
-    
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">Foodie Navigator</label>
-            <ul>
-              <li><a class="#" href="#">Home</a></li>
-              <li><a class="#" href="#">Areas</a></li>
-              <li><a class ="#" a href="user-profile.php">Profile</a></li>
-              <li><a class="#" href="contact.php">Contact</a></li>
-              <li><a class="active" href="team.html">Team</a></li>
-            </ul>
-          </nav>
-              
-          <div class="margintop"></div>
-    
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="images/team/dusb.jpg" alt="Jane" class="team-img">
-          <div class="container">
-            <h2>Tharusha Anushanga</h2>
-            <p class="title">CEO & Founder</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <div class="team-icons">
-              <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-              <i class="fa-brands fa-discord" style="margin:5px;"></i>
-              <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-              <i class="fa-brands fa-square-github" style="margin:5px;"></i>
+    <div class="team-root-body">
+      <div id="root">
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/Tharusha.webp" alt="Tharusha" />
             </div>
-            <p><button class="button">Contact</button></p>
+            <div class="bottom">
+              <h2>Tharusha Pathirana</h2>
+              <p class="title">Front-End Developer / Designer</p>
+              <div class="team-icons">
+                <a href="mailto:thanushanga@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/tharusha-pathirana-632716249"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/DusB70" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    
-      <div class="column">
-        <div class="card">
-          <img src="images/team/buda 1.jpg" alt="Mike" class="team-img">
-          <div class="container">
-            <h2>Budvin Anusara</h2>
-            <p class="title">Art Director</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <div class="team-icons">
-              <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-              <i class="fa-brands fa-discord" style="margin:5px;"></i>
-              <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-              <i class="fa-brands fa-square-github" style="margin:5px;"></i>
+
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/buda 1.webp" alt="Budvin" />
             </div>
-            <p><button class="button">Contact</button></p>
+            <div class="bottom">
+              <h2>Budvin Anusara</h2>
+              <p class="title">Q/A Tester</p>
+              <div class="team-icons">
+                <a href="mailto:Budvinanusara@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/budvin-anusara-313b23331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/Budvinanusara" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="column">
-        <div class="card">
-          <img src="images/team/dulara.jpg" alt="John" class="team-img">
-          <div class="container">
-            <h2>Dulara Abhishek</h2>
-            <p class="title">Designer</p>
-            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-            <div class="team-icons">
-              <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-              <i class="fa-brands fa-discord" style="margin:5px;"></i>
-              <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-              <i class="fa-brands fa-square-github" style="margin:5px;"></i>
+
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/dulara.webp" alt="Dulara" />
             </div>
-            <p><button class="button">Contact</button></p>
+            <div class="bottom">
+              <h2>Dulara Abhishek</h2>
+              <p class="title">Designer / Content Manager</p>
+              <div class="team-icons">
+                <a href="mailto:dularaabhishek91@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/dulara-abhishek-405365137/?trk=public-profile-join-page"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/abhishek-dulara" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/nima.webp" alt="Nimsara" />
+            </div>
+            <div class="bottom">
+              <h2>Ashan Nimsara</h2>
+              <p class="title">Back-End Developer / Project Manager</p>
+              <div class="team-icons">
+                <a href="mailto:ashannimsara1234@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/ashan-nimsara-753a4a289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/nimaa5867" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/manodya.webp" alt="Manodya" />
+            </div>
+            <div class="bottom">
+              <h2>Manodya Samararathne</h2>
+              <p class="title">Project Manager / Designer</p>
+              <div class="team-icons">
+                <a href="manodyasamararathne@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/manodya-samararathne-25296b331?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/ManodyaSamararathne" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="team-img">
+            <div class="team-img-div">
+              <img src="images/team/shazna.webp" alt="Shazna" />
+            </div>
+            <div class="bottom">
+              <h2>Shazna Ishak</h2>
+              <p class="title">Front-End Developer / Q/A Tester</p>
+              <div class="team-icons">
+                <a href="mailto:shaznaishak10@gmail.com"
+                  ><i class="fa-solid fa-envelope" style="margin: 5px"></i
+                ></a>
+                <a
+                  href="https://lk.linkedin.com/in/shazna-ishak-629a38328"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin" style="margin: 5px"></i
+                ></a>
+                <a href="https://github.com/shaznaishak1" target="_blank"
+                  ><i class="fa-brands fa-github" style="margin: 5px"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-<!-- second row -->
-    <div class="row">
-        <div class="column">
-          <div class="card">
-            <img src="images/team/nima.jpg" alt="Jane" class="team-img">
-            <div class="container">
-              <h2>Ashan Nimsara</h2>
-              <p class="title">CEO & Founder</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <div class="team-icons">
-                <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-                <i class="fa-brands fa-discord" style="margin:5px;"></i>
-                <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-                <i class="fa-brands fa-square-github" style="margin:5px;"></i>
-              </div>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="column">
-          <div class="card">
-            <img src="images/team/manodya.jpg" alt="Mike" class="team-img">
-            <div class="container">
-              <h2>Manodya Samararathne</h2>
-              <p class="title">Art Director</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <div class="team-icons">
-                <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-                <i class="fa-brands fa-discord" style="margin:5px;"></i>
-                <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-                <i class="fa-brands fa-square-github" style="margin:5px;"></i>
-              </div>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="column">
-          <div class="card">
-            <img src="images/team/shazna.jpg" alt="John" class="team-img">
-            <div class="container">
-              <h2>Shazna Ishak</h2>
-              <p class="title">Designer</p>
-              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-              <div class="team-icons">
-                <i class="fa-solid fa-envelope" style="margin:5px;"></i>
-                <i class="fa-brands fa-discord" style="margin:5px;"></i>
-                <i class="fa-brands fa-linkedin" style="margin:5px;"></i>
-                <i class="fa-brands fa-square-github" style="margin:5px;"></i>
-              </div>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    
-</body>
+  </body>
 </html>

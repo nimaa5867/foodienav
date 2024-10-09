@@ -25,31 +25,31 @@ if (isset($_GET['location'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter Page</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
-<header>
-      <nav class="navbar">  
-          <img src="images/Logo.png" alt="Brand Logo" class="logo"/>
-          <ul>
-            <li><a href="area.php">AREAS</a></li>
-            <li><a href="user-profile.php">PROFILE</a></li>
-            <li><a href="index1.php">HOME</a></li>
-          </ul>
-         <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
-      </nav>
-      <nav class="side-menu" id="side-menu">
-        <ul>
-          <li><a href="index1.php">HOME</a></li>
-          <li><a href="area.php">AREAS</a></li>
-          <li><a href="user-profile.php">PROFILE</a></li>
-        </ul>
-      </nav>
+    <header>
+        <nav class="navbar">
+            <img src="images/Logo.png" alt="Brand Logo" class="logo" />
+            <ul>
+                <li><a href="area.php">AREAS</a></li>
+                <li><a href="user-profile.php">PROFILE</a></li>
+                <li><a href="index1.php">HOME</a></li>
+            </ul>
+            <div class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></div>
+        </nav>
+        <nav class="side-menu" id="side-menu">
+            <ul>
+                <li><a href="index1.php">HOME</a></li>
+                <li><a href="area.php">AREAS</a></li>
+                <li><a href="user-profile.php">PROFILE</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="sidebody">
@@ -123,7 +123,7 @@ if (isset($_GET['location'])) {
                 </div>
                 <div class='bottom'>
                     <h3>${hotelName}<br>${address}</h3>
-                    <h4>${priceRange}</h4>
+                    <h4 class="price">Price Range:${priceRange}</h4>
                 <form action='reserve.php' method='post'>
                 <input type='hidden' name='hotelID' value='${hotelID}'>
                 <button class="login-button" type='submit' name='reserve'>Reserve</button>
@@ -136,13 +136,14 @@ if (isset($_GET['location'])) {
         displayItem(categories);
     </script>
     <script>
-      // JAVASCRIPT FOR MENU TOGGLE
-      const menuIcon = document.getElementById("menu-icon");
-      const sideMenu = document.getElementById("side-menu");
+        // JAVASCRIPT FOR MENU TOGGLE
+        const menuIcon = document.getElementById("menu-icon");
+        const sideMenu = document.getElementById("side-menu");
 
-      menuIcon.addEventListener("click", function () {
-        sideMenu.classList.toggle("open");
-      });
+        menuIcon.addEventListener("click", function() {
+            sideMenu.classList.toggle("open");
+        });
     </script>
 </body>
+
 </html>
